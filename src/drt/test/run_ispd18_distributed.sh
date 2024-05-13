@@ -6,7 +6,7 @@
 for j in {1..3} ; do
   # Skipping test2 because it throws an error.
   for i in 1 {3..10} ; do
-      # ../../../../install/OpenROAD/bin/openroad ispd18_test${i}_distributed.tcl | tee results/ispd18_test${i}_distributed_run${j}.log
+      ../../../../install/OpenROAD/bin/openroad ispd18_test${i}_distributed.tcl | tee results/ispd18_test${i}_distributed_run${j}.log
       ../../../../install/OpenROAD/bin/openroad ispd18_test${i}.tcl | tee results/ispd18_test${i}_run${j}.log
   done
 done

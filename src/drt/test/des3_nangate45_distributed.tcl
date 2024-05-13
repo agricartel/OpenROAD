@@ -1,5 +1,6 @@
 source "helpers.tcl"
 
+# OpenROAD binary
 set OR $argv0
 set server1 [exec $OR server1.tcl > results/server1.log &]
 set server2 [exec $OR server2.tcl > results/server2.log &]
@@ -11,7 +12,7 @@ read_lef Nangate45/Nangate45_stdcell.lef
 read_def des3_nangate45_preroute.def
 read_guides des3_nangate45.route_guide
 
-set_thread_count [expr [exec getconf _NPROCESSORS_ONLN] / 4]
+# set_thread_count [expr [exec getconf _NPROCESSORS_ONLN] / 4]
 detailed_route -output_drc results/des3_nangate45_distributed.output.drc.rpt \
                -output_maze results/des3_nangate45_distributed.output.maze.log \
                -verbose 1 \

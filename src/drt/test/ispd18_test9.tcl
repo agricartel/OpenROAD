@@ -1,5 +1,6 @@
 source "helpers.tcl"
 
+set_thread_count [expr [exec getconf _NPROCESSORS_ONLN] / 4 * 3]
 read_lef testcase/ispd18_test9/ispd18_test9.input.lef
 read_def testcase/ispd18_test9/ispd18_test9.input.def
 read_guides testcase/ispd18_test9/ispd18_test9.input.guide
